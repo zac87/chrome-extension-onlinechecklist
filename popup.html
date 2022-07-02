@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	  <link rel="stylesheet" href="./bootstrap.min.css">  
+	  <link href="./oswald.css" rel="stylesheet">
+	  <style>
+		  * {
+			font-family: 'Oswald', sans-serif;
+		 }
+	     body {
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+         }
+		.calendar {
+			margin-top: 20px;
+			margin-bottom: 50px;
+		}
+		
+		.dotted {
+			padding: 2.25em 1.6875em;
+			background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+			background-image: -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+			background-image: -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+			background-image: repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+			-webkit-background-size: 3px 3px;
+			-moz-background-size: 3px 3px;
+			background-size: 3px 3px;
+		}
+
+      </style>
+  </head>
+  <body>
+	<div class="container dotted">
+		<div class="row">
+			<div class="col-12">
+				<div class="card calendar">
+					<div class="card-body">
+						<a href="https://onlinechecklist.net" target="_blank"><img src="logo-color.png" width="70%"></a>
+						<h3>Checklist</h3>
+						<input type="button" value="< Previous Day" class="btn-primary" id="btn_sub">
+						<b id="today_date"></b>
+						<input type="button" value="Next Day >" class="btn-primary" id="btn_add">
+						<br>
+						<div class="container">
+							<div class="row">
+								<div class="row">
+									<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+										<p id="appointment">Appointment</p>
+										<p id="grocery">Grocery</p>
+										<p id="doctor">Doctor</p>
+										<p id="vet">Vet</p>
+										<p id="schooling">Schooling</p>
+										<p id="homework">Homework</p>
+										<p id="unvercity">Univercity</p>
+										<p id="shopping">Shopping</p>
+										<p id="carrepair">Car Repair</p>
+										<p id="garden">Garden</p>
+									</div>  
+									<div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6">
+										<p id="books">Books</p>
+										<p id="computerwork">Computer Work</p>
+										<p id="tvradio">TV & Radio</p>
+										<p id="clothes">Clothes</p>
+										<p id="electronics">Electronics</p>
+										<p id="cooking">Cooking</p>
+										<p id="painting">Painting</p>
+										<p id="toys">Toys</p>
+										<p id="other">Other</p>
+									</div>                                                                                                                                                                                                 
+								</div>
+								<div class="col-xxl-4 col-xl-4 col-lg-2 col-md-3 col-sm-3">
+									<div class="row">
+										<h4>ToDos</h4>
+										<div class="col-6">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="appointment_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Appointment
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="grocery_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Grocery
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="doctor_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Doctor
+												</label>
+											</div>                                 
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="vet_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Vet
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="schooling_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Schooling
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="homework_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Homework
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="unvercity_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Univercity
+												</label>
+											</div>   
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="shopping_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Shopping
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" value="" id="carrepair_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Car Repair
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="garden_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Garden
+												</label>
+											</div> 
+										</div>
+										<div class="col-6">
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="books_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Books
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="computerwork_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Computer Work
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="tvradio_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													TV & Radio
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="clothes_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Clothes
+												</label>
+											</div>
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="electronics_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Electronics
+												</label>
+											</div>  
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="cooking_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Cooking
+												</label>
+											</div>  
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="painting_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Painting
+												</label>
+											</div>   
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="toys_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Toys
+												</label>
+											</div> 
+											<div class="form-check">
+												<input class="form-check-input" type="checkbox" id="other_checkbox">
+												<label class="form-check-label" for="flexCheckDefault">
+													Other
+												</label>
+											</div>                                                                                                                                                                                                                                                                                     
+										</div>                             
+									</div>
+								</div>
+								<div class="col-xxl-8 col-xl-8 col-lg-10 col-md-9 col-sm-9">
+									<h4>Notes</h4>
+									<textarea cols="30" rows="10" id="notes" value="test"></textarea>
+								</div>
+							</div>
+						</div><br/><br/>
+						<input type="button" value="Save" id="btn_save"><br/>
+					</div>
+				</div>
+			</div
+		</div>
+	</div>
+  </body>
+  <p>(c) copyright 2022: onlinechecklist.net</p>
+  <script src="popup.js"></script>
+</html>

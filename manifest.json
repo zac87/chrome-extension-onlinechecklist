@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "OnlineChecklist.net",
+  "version": "1.0",
+  "description": " Is A Extension For Your Daily ToDos. Write Down Notes And Create A Checklist.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "logo-extension128.png"
+  },
+  "icons": {
+	"16": "logo-extension16.png",
+    "48": "logo-extension48.png",
+    "128": "logo-extension128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_end",
+      "js": ["content.js"]
+    }
+  ],
+ "permissions": [
+    "tabs",
+    "activeTab",
+    "<all_urls>"
+  ]
+}
